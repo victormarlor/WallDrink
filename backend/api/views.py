@@ -32,7 +32,7 @@ def register(request):
     from django.core.exceptions import ValidationError
 
     User = get_user_model()
-    print("📥 Datos recibidos en /register:", request.data)
+   # print("📥 Datos recibidos en /register:", request.data)
 
     try:
         username = request.data.get("username", "").strip()
@@ -332,7 +332,7 @@ class ProductViewSet(viewsets.ModelViewSet):
 
     def create(self, request, *args, **kwargs):
         print("🚀 Se ha llamado a create()")
-        print("📩 Datos recibidos:", request.data)
+        #print("📩 Datos recibidos:", request.data)
 
         # 🧠 Asociar producto automáticamente a la tienda del usuario
         shop = Shop.objects.filter(owner=request.user).first()
@@ -452,7 +452,7 @@ class ProductViewSet(viewsets.ModelViewSet):
     def create(self, request, *args, **kwargs):
         """Guarda un nuevo producto asociado a la tienda del usuario."""
         print("🚀 Se ha llamado a create()")
-        print("📩 Datos recibidos en create():", request.data)
+        #print("📩 Datos recibidos en create():", request.data)
 
         user = request.user
         if not user.is_authenticated:
@@ -516,7 +516,7 @@ class ProductViewSet(viewsets.ModelViewSet):
     def update(self, request, *args, **kwargs):
         """Edita un producto solo si pertenece al usuario autenticado."""
         print("🚀 Se ha llamado a update()")
-        print("📩 Datos recibidos en update():", request.data)
+        #print("📩 Datos recibidos en update():", request.data)
 
         user = request.user
         product = self.get_object()
@@ -614,7 +614,7 @@ def public_product_detail(request, pk):
 
 @api_view(['POST'])
 def create_order(request):
-    print("📥 Datos recibidos:", request.data)
+    #print("📥 Datos recibidos:", request.data)
 
     try:
         data = request.data.copy()  # Hacemos una copia para poder modificarla
