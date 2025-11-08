@@ -70,3 +70,91 @@ frontend/
     context/        # Cart and auth context
   public/
   vite.config.js
+```
+
+# 🚀 How to run it locally
+## 1. Backend (Django API)
+
+From the project root:
+```text
+cd backend
+
+# (optional) Create & activate virtualenv
+python -m venv venv
+# On Windows:
+venv\Scripts\activate
+# On Linux/macOS:
+# source venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+Create a .env file inside backend/ (same folder as manage.py):
+
+DJANGO_SECRET_KEY=change_me_dev_key
+EMAIL_HOST_USER=dummy@example.com
+EMAIL_HOST_PASSWORD=dummy_password
+
+
+These values are only for local dev. In production, secrets must come from a secure environment.
+
+Run migrations and start the dev server:
+```
+python manage.py migrate
+python manage.py runserver
+```
+
+The API should be available at:
+http://127.0.0.1:8000/
+
+## 2. Frontend (React + Vite)
+
+From the project root:
+```
+cd frontend
+npm install
+npm run dev
+```
+
+By default Vite will run on something like:
+http://localhost:5173/
+
+The frontend expects the backend at http://localhost:8000/.
+
+## 🔐 Security notes
+
+No real credentials are committed to this repository.
+
+SECRET_KEY and email credentials are loaded from environment variables (see .env.example below).
+
+backend/media/, venv/, node_modules/ and any SQLite DB are ignored via .gitignore.
+
+This repo is intended to demonstrate:
+
+Backend + frontend integration
+
+REST API design
+
+Dynamic pricing/domain modelling
+
+## 🧪 Tests / status
+
+Right now the main focus is on the core flows (auth, shops, products, orders).
+Formal automated test coverage is minimal / WIP. If you fork this repo and want to extend it, a good first contribution would be:
+
+Add unit tests around the pricing logic
+
+Add integration tests for auth + orders
+
+## 🗺️ Roadmap / TODO
+
+Improve dynamic pricing algorithm and expose it clearly through the API
+
+Add admin/UI tools for configuring pricing rules per shop/product
+
+Add proper test suite (pytest or Django tests)
+
+Docker setup for easier local spin-up
+
+CI (GitHub Actions) to run tests and linting on PRs
