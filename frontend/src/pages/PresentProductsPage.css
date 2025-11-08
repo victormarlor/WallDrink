@@ -1,0 +1,64 @@
+.present-page {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Slider - solo CSS animation */
+.slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #f0f2f5;
+    padding: 20px 0;
+}
+
+.slider-content {
+    display: inline-flex;
+    animation: scroll 30s linear infinite; /* 👈 El truco real */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.slide {
+    flex: 0 0 auto;
+    width: 250px;
+    margin: 0 10px;
+}
+
+/* Tabla igual compacta */
+.market-table table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-size: 14px;
+}
+
+.market-table td {
+    width: 33.33%;
+    border: 1px solid #ccc;
+    padding: 6px;
+    text-align: center;
+    vertical-align: middle;
+    height: 40px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+

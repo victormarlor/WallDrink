@@ -1,0 +1,216 @@
+/* Ruta: src/pages/MyOrdersPage.css */
+
+
+.orders-title {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.orders-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.orders-tabs button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    flex-grow: 1;
+    outline: none;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 15px;
+    background-color: #434343;
+    color: white;
+}
+
+.orders-tabs button.active {
+  background-color: #e6fa4d;
+  color: #121212;
+  border-color: #e6fa4d;
+}
+
+/* Botón izquierdo: sin border-radius en la derecha */
+.orders-tabs button:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Botón derecho: sin border-radius en la izquierda */
+.orders-tabs button:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.order-image {
+  width: 80px;
+  height: 80px;
+  background-color: #333;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-card {
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  display: flex;
+  gap: 15px;
+  padding: 10px;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.order-card:hover {
+  background-color: #2a2a2a;
+}
+
+.order-image {
+  width: 120px;
+  height: 120px;
+  background-color: #333;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+
+.order-info {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.order-details {
+  flex: 1 1 60%;
+}
+
+
+
+.order-items {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.order-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  min-width: 120px;
+}
+
+.order-badge {
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fefefe;
+  font-weight: 100;
+  border-radius: 5px;
+}
+
+.order-badge.pendiente {
+  background-color: #ffc1077e;
+}
+
+.order-badge.finalizado {
+  background-color: #28a7457e;
+}
+
+.order-badge.cancelado {
+  background-color: #d9534f7e;
+}
+
+.repeat-button {
+  background-color: transparent;
+  border: 1px solid #e6fa4d;
+  color: #e6fa4d;
+  padding: 5px 15px;
+  font-size: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.repeat-button:hover {
+  background-color: #e6fa4d;
+  color: #121212;
+}
+
+.order-status-date.finalizado {
+  color: #28a745;
+  font-size: 0.85rem;
+}
+
+.order-status-date.cancelado {
+  color: #d9534f;
+  font-size: 0.85rem;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.no-orders-message {
+  color: #bbb;
+  font-size: 1.1rem;
+  margin-top: 30px;
+  text-align: center;
+}
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.order-header h3{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.no-bullets {
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+}
+
+.order-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-total {
+  font-weight: 600;
+  font-size: 16px;
+}
+.ver-mas-texto {
+  color: #aaa;
+  font-size: 12px;
+  font-style: italic;
+}
+.order-details-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}

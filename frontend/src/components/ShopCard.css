@@ -1,0 +1,83 @@
+.shop-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #434343;
+  border-radius: 10px;
+  width: 100%;
+  height: 358px;
+  max-width: 320px;
+  box-sizing: border-box;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.shop-image {
+  width: 100%;
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 14px;
+  filter: brightness(0.5);
+}
+
+.shop-name,
+.shop-address,
+.shop-distance {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.shop-name {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  color: #fefefe;
+}
+
+.shop-address {
+  font-size: 12px;
+  font-weight: 100;
+  color: #fefefe;
+  margin: 0;
+}
+
+.view-store-button {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  background-color: #111111;
+  padding: 4px 7px 0 7px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.view-store-button svg {
+  color: #e6fa4d;
+  font-size: 18px;
+}
+
+.favorite-button {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  background-color:transparent;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.favorite-icon {
+  font-size: 20px;
+  color: #cacaca;
+}
+
+.favorite-icon.active {
+  color: #e6fa4d;
+}

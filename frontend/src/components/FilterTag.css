@@ -1,0 +1,27 @@
+/* Estilos para las etiquetas de filtro */
+.filter-tag {
+    display: inline-flex;
+    align-items: normal;
+    line-height: 1.8;
+    justify-content: center;
+    padding: 5px 5px 5px 15px;
+    margin-right: 0;
+    background-color: #111111;
+    color: #E6FA4D;
+    border-radius: 50px;
+    font-size: 14px;
+    cursor: default;
+    border: solid 1px #E6FA4D
+}
+
+/* Estilos para el botón de eliminar */
+.remove-button {
+    margin-left: 20px;
+    padding: 0 5px 0 5px;
+    background: #434343;
+    border: none;
+    color: #E6FA4D;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50px;
+}

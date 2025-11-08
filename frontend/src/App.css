@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 0;
+
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #f3f4f6;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html {
+  scrollbar-gutter: stable;
+  overflow-y: scroll; /* asegura que el espacio esté reservado */
+  background-color: transparent; /* igual al fondo de tu app */
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-color: #111111;
+  color: #fefefe;
+}
+
+/* Estructura principal de la app */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar Sticky */
+
+.main-container {
+  flex-grow: 1;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.content-wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 161px 0 100px 0;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button:focus,
+button:focus-visible {
+  outline: none;
+}
+h2, h3, p, li{
+  margin: 0;
+}
+
+input{
+  outline: none;
+}
+textarea{
+  outline: none;
+}

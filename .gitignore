@@ -1,0 +1,53 @@
+# ======================
+# ⚙️ Archivos de entorno
+# ======================
+.env
+*.env
+
+# ======================
+# 🧱 Base de datos local
+# ======================
+*.sqlite3
+db.sqlite3
+
+# ======================
+# 🐍 Entornos virtuales de Python
+# ======================
+venv/
+backend/venv/
+
+# ======================
+# 📦 Dependencias de Node.js
+# ======================
+frontend/node_modules/
+backend/node_modules/
+
+# ======================
+# 🧰 Archivos generados por compilación (React)
+# ======================
+frontend/build/
+frontend/dist/
+
+# ======================
+# 🖼️ Archivos y logs temporales
+# ======================
+*.log
+backend/log.*
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+
+# ======================
+# 💾 Archivos de medios (uploads locales)
+# ======================
+backend/media/
+
+# ======================
+# 💻 Configuraciones de IDEs / editores
+# ======================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+

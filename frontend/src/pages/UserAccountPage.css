@@ -1,0 +1,51 @@
+
+.titulo-mi-cuenta{
+    font-size: 32px;
+    font-weight: 500;
+}
+.user-profile-section {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-avatar {
+  background-color: #d3ff3c;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.user-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.user-options {
+  margin-top: 40px;
+  background-color: #333;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.user-option {
+  padding: 18px 20px;
+  border-bottom: 1px solid #444;
+  text-align: left;
+  color: white;
+  cursor: pointer;
+}
+
+.user-option:last-child {
+  border-bottom: none;
+}
+
+.user-option.logout {
+  color: #ff4c4c;
+}

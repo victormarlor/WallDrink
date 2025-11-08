@@ -1,0 +1,104 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #434343;
+  border-radius: 10px;
+  width: 100%;
+  height: 358px;
+  max-width: 320px;
+  box-sizing: border-box;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.product-image {
+  width: 100%;
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 14px;
+  filter: brightness(0.5);
+}
+
+.product-name,
+.product-price,
+.product-distance,
+.product-shop-name,
+.product-shop-address
+ {
+  padding-left: 12px;
+  padding-right: 12px;
+
+}
+
+.product-name {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 10px 0;
+  color: #fefefe;
+  line-height: 1.1;
+}
+.product-shop-address{
+    font-size: 12px;
+  font-weight: 100;
+  color: #fefefe;
+  margin: 0;
+}
+.product-shop-name{
+  font-size: 16px;
+}
+.product-price {
+  font-size: 16px;
+  font-weight: 400;
+  position: absolute;
+  bottom: 6px;
+  left: 0px;
+  color: #fefefe;
+}
+
+.view-store-button {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  background-color: #111111;
+  padding: 3px 7px 0 7px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.edit-button{
+    position: absolute;
+  bottom: 6px;
+  right: 6px;
+  background-color: #111111;
+  color: #e6fa4d;
+  padding: 7px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.view-store-button svg {
+  color: #e6fa4d;
+  font-size: 18px;
+}
+.view-store-button{
+  color: #e6fa4d;
+}
+.favorite-icon {
+  font-size: 18px;
+  color: #cacaca;
+}
+
+.favorite-icon.active {
+  color: #e6fa4d;
+}
+.product-id{
+  font-size: 14px;
+  margin-left: 12px;
+}

@@ -1,0 +1,67 @@
+/* Ruta: src/components/Footer.css */
+
+.footer {
+  background: linear-gradient(to right, #111111, #4b5025);
+  color: #ffffff;
+  padding: 40px 20px 20px 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 180px;
+}
+
+.footer-logo {
+  height: 50px;
+  margin-bottom: 16px;
+}
+
+.footer-contact {
+  margin: 4px 0;
+  color: #d9d9d9;
+  font-size: 13px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-section li {
+  color: #d9d9d9;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-section li:hover {
+  color: #e6fa4d;
+}
+
+.footer-separator {
+  margin: 40px 0 20px 0;
+  border: none;
+  border-top: 1px solid #99999933;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 12px;
+  color: #cccccc;
+}
+

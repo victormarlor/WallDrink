@@ -1,0 +1,126 @@
+.auth-container {
+  background-color: #111;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.auth-box {
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-logo {
+  width: 150px;
+  margin: 0 auto 1rem;
+}
+
+.auth-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #fefefe;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.auth-subtitle {
+    font-size: 17px;
+    font-weight: 200;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 20px 0;
+}
+.input-section{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.auth-tabs {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+
+.auth-tab {
+    width: 100%;
+  font-size: 0.95rem;
+  font-weight: 300;
+  padding: 10px;
+  color: #aaa;
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+}
+
+.auth-tab.active {
+  color: #E6FA4D;
+  border-color: #E6FA4D;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.auth-label {
+  font-size: 14px;
+  color: #fefefe;
+  text-align: left;
+  margin: 0 0 5px 0;
+}
+
+.auth-input {
+  background-color: #31341a;
+  color: #cacaca;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 200;
+    outline: none;
+}
+.auth-input::placeholder{
+    color: #cacaca;
+}
+.auth-link {
+  color: #E6FA4D;
+  font-size: 12px;
+  font-weight: 100;
+  text-align: left;
+  display: block;
+  margin-top: 0.2rem;
+  text-decoration: none;
+}
+
+.auth-button {
+  background-color: #E6FA4D;
+  color: #111;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.auth-bottom-text {
+  margin-top: 20px;
+  font-size: 12px;
+  font-weight: 100;
+  color: #fefefe;
+  text-align: left;
+}
+
+.auth-bottom-text a {
+  color: #E6FA4D;
+  text-decoration: none;
+}

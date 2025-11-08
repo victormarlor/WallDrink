@@ -1,0 +1,27 @@
+/* src/components/Shop/CreateShop.css */
+
+.create-shop-container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.create-shop-container h2 {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+}
+
+
+
+
+.message {
+    margin-top: 10px;
+    color: green;
+}

@@ -1,0 +1,18 @@
+/* frontend/src/pages/BecomeSeller.css */
+.seller-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.seller-form input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.seller-form button {
+    margin-top: 15px;
+}

@@ -1,0 +1,132 @@
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-card-compact {
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: background-color 0.2s;
+}
+
+.order-card-compact:hover {
+  background-color: #2a2a2a;
+}
+
+.order-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.order-name-products {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 65%;
+}
+
+.order-customer {
+  font-weight: 500;
+  color: #fefefe;
+}
+
+.order-items-list {
+  font-size: 14px;
+  color: #fefefe;
+  font-weight: 300;
+}
+
+.order-code-date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  gap: 4px;
+  min-width: 150px;
+}
+
+.order-id {
+  color: #fefefe;
+  font-weight: 200;
+}
+
+.order-date {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.order-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.order-total {
+  font-weight: 500;
+  font-size: 15px;
+  color: #fefefe;
+}
+
+.order-status-select {
+  background-color: #1e1e1e;
+  color: #fefefe;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 0px 6px 8px;
+  font-size: 12px;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.order-status-select.pendiente {
+  background-color: #5a4a1b;
+}
+
+.order-status-select.finalizado {
+  background-color: #205b3b;
+}
+
+.order-status-select.cancelado {
+  background-color: #5c1b1b;
+}
+.verification-section {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.verification-input {
+  padding: 15px;
+  background-color: #31341a;
+  border: none;
+  border-radius: 6px 0 0 6px;
+  color: #fefefe;
+  flex: 1;
+  font-size: 14px;
+  font-weight: 200;
+  outline: none;
+}
+
+.verification-input::placeholder {
+  color: #fefefe;
+}
+
+.verification-button {
+  background-color: #E6FA4D;
+  color: #111;
+  font-weight: 500;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 14px;
+}

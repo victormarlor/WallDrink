@@ -1,0 +1,140 @@
+/* TicketPage.css - estilo fiel al diseño de referencia */
+
+.ticket-page {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  color: #fefefe; /* blanco suave para texto */
+}
+
+.ticket-page h1 {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #fefefe;
+}
+.ticket-page h2{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.qr-section {
+  position: relative;
+  text-align: center;
+  padding: 70px;
+  margin-top: 40px;
+  background-image: url("../assets/ticket.svg");
+  background-repeat: no-repeat;
+  background-size: 450px auto;
+  background-position: center;
+}
+
+.qr-section img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 1rem;
+  border: solid 10px white;
+}
+
+.verification-code {
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.ticket-items {
+    text-align: start;
+  border-radius: 12px;
+  margin-top: 1rem;
+}
+
+.ticket-items ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.ticket-items li:last-child {
+  border-bottom: none;
+}
+
+.ticket-total {
+  text-align: right;
+    font-size:18px;
+    font-weight: 400;
+    margin-top: 10px;
+  color: #fefefe;
+}
+
+.ticket-actions {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+.ticket-actions button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Primer botón: transparente con borde y texto */
+.ticket-actions button:first-child {
+  background-color: transparent;
+  color: #fefefe;
+  border: 1px solid #E6FA4D;
+}
+
+/* Segundo botón: fondo verde neón */
+.ticket-actions button:last-child {
+  background-color: #E6FA4D;
+  color: #111111;
+  border: none;
+}
+
+.ticket-item-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.ticket-item-line:last-child {
+  border-bottom: none;
+}
+
+.ticket-item-info {
+  flex: 1;
+  text-align: left;
+}
+
+.ticket-item-price {
+  flex-shrink: 0;
+  text-align: right;
+  min-width: 80px;
+}
+
+@media (max-width: 600px) {
+  .ticket-page {
+    padding: 1rem;
+  }
+
+  .ticket-actions {
+    flex-direction: column;
+  }
+
+  .qr-section img {
+    width: 140px;
+  }
+
+  .ticket-total {
+    font-size: 1.1rem;
+  }
+}
