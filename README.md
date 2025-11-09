@@ -146,7 +146,7 @@ Developing **WallDrink** strengthened my experience with:
 
 ## 📸 Preview
 <p align="center">
-  <img src="frontend/src/assets/Screenshot.png" width="120" alt="WallDrink logo" />
+  <img src="frontend/src/assets/Screenshot.png" width="1280" alt="WallDrink logo" />
 </p>
 
 ---
