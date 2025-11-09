@@ -1,160 +1,164 @@
-# WallDrink
+# 🍹 WallDrink
 
-Web platform for buyers and sellers where the price of drinks and food can **fluctuate dynamically** based on demand and other factors.  
-The goal is to give local venues (bars, restaurants, shops) tools to experiment with **dynamic pricing** while keeping a smooth experience for end users.
+**WallDrink** is a full-stack web platform that enables **dynamic pricing for food and beverage venues** — bars, restaurants, and shops can adjust product prices in real time based on demand and sales patterns.  
 
-> Original project context: internal tool for managing prices of products in hospitality venues.
+The goal is to bring **flexible, data-driven pricing** to the hospitality sector while maintaining a clean and user-friendly experience for buyers and sellers.
+
+> 🧠 Originally developed during an **internship project**, later refactored and published as an open-source learning reference.
 
 ---
 
-## ✨ Main Features (current state)
+## 🚀 Features
 
-- 🔐 **Authentication & accounts**
-  - User registration, login, password reset
-  - Email-based account activation
-  - JWT-based authentication (via `dj-rest-auth` + `djangorestframework-simplejwt`)
+### 🔐 Authentication & Accounts
+- User registration, login, logout, and password reset  
+- Email-based account activation  
+- JWT authentication using `dj-rest-auth` + `djangorestframework-simplejwt`
 
-- 🏪 **Shops & products**
-  - CRUD for shops and products
-  - Product images and shop images
-  - Basic seller vs buyer flows
+### 🏪 Shops & Products
+- Create and manage shops and their products  
+- Upload product and shop images  
+- Role-based flows for **sellers** and **buyers**
 
-- 📈 **Dynamic pricing logic (WIP)**
-  - Structure prepared for storing prices, orders and time-based changes
-  - The idea is to adjust prices based on demand / activity
-  - Some parts are still in progress / experimental
+### 💸 Dynamic Pricing (in progress)
+- Backend structure ready for price tracking and adjustment  
+- Concept: automatic price fluctuation based on order volume and time  
+- Prototype logic for real-time updates (to be expanded)
 
-- 🧾 **Orders**
-  - Simple cart and order flow
-  - Buyers can create orders for products from shops
+### 🧾 Orders & Cart
+- Basic shopping cart and order creation  
+- Simple order history and order-item tracking  
 
-- 🌐 **Frontend**
-  - React + Vite SPA
-  - Pages for home, login/register, dashboards, shop and product views
+### 🌐 Frontend
+- **React + Vite** single-page app  
+- Clean, component-based design  
+- Responsive layout for desktop and mobile
 
 ---
 
 ## 🧱 Tech Stack
 
-**Backend**
-
-- Python / Django
-- Django REST Framework
-- `dj-rest-auth` + `django-allauth`
-- `djangorestframework-simplejwt`
-- `django-cors-headers`
-- `Pillow` for image handling
-- SQLite for local development
-
-**Frontend**
-
-- React + Vite
-- Context API for cart and auth state
-- CSS files per component/page
+| Layer | Technologies |
+|:------|:--------------|
+| **Backend** | Django 4 · Django REST Framework · dj-rest-auth · allauth · simplejwt · cors-headers · Pillow |
+| **Frontend** | React 18 · Vite 5 · Context API · Fetch API |
+| **Database** | SQLite (for local development) |
+| **Dev Tools** | Git · npm · pip · venv |
 
 ---
 
-## 🗂️ Project structure (high level)
+## 🗂️ Project Structure
 
 ```text
 backend/
-  backend/          # Django project settings, URLs, ASGI/WGI
-  api/              # Core app: models, serializers, views, urls, tokens
-  media/            # Local media (ignored in git)
+  backend/      # Django project settings, URLs, ASGI/WGI
+  api/          # Core app: models, serializers, views, urls, tokens
+  media/        # Local media files (ignored in git)
   manage.py
 
 frontend/
   src/
-    pages/          # Main screens (Home, Login, Dashboard, Products, etc.)
-    components/     # Reusable UI components
-    context/        # Cart and auth context
+    pages/      # Main views (Home, Login, Dashboard, Products, etc.)
+    components/ # Reusable UI components
+    context/    # Cart & auth state
   public/
   vite.config.js
 ```
 
-# 🚀 How to run it locally
-## 1. Backend (Django API)
+---
 
-From the project root:
-```text
+## 🧩 Getting Started
+
+### ▶️ Backend (Django API)
+
+```bash
 cd backend
-
-# (optional) Create & activate virtualenv
 python -m venv venv
-# On Windows:
-venv\Scripts\activate
-# On Linux/macOS:
-# source venv/bin/activate
-
-# Install dependencies
+venv\Scripts\activate      # Windows
+# source venv/bin/activate # macOS/Linux
 pip install -r requirements.txt
 ```
 
-Create a .env file inside backend/ (same folder as manage.py):
+Create a `.env` file inside `/backend`:
 
+```env
 DJANGO_SECRET_KEY=change_me_dev_key
 EMAIL_HOST_USER=dummy@example.com
 EMAIL_HOST_PASSWORD=dummy_password
-
-
-These values are only for local dev. In production, secrets must come from a secure environment.
-
-Run migrations and start the dev server:
 ```
+
+Then run:
+
+```bash
 python manage.py migrate
 python manage.py runserver
 ```
 
-The API should be available at:
-http://127.0.0.1:8000/
+Backend API → http://127.0.0.1:8000/
 
-## 2. Frontend (React + Vite)
+---
 
-From the project root:
-```
+### ▶️ Frontend (React + Vite)
+
+```bash
 cd frontend
 npm install
 npm run dev
 ```
 
-By default Vite will run on something like:
-http://localhost:5173/
+Frontend App → http://localhost:5173/  
+The frontend expects the backend running at `http://localhost:8000/`.
 
-The frontend expects the backend at http://localhost:8000/.
+---
 
-## 🔐 Security notes
+## 🔐 Security Notes
 
-No real credentials are committed to this repository.
+- No real credentials are stored in this repository.  
+- All secrets are loaded from environment variables (`.env`).  
+- Sensitive folders (`media/`, `venv/`, `node_modules/`, databases) are safely ignored via `.gitignore`.
 
-SECRET_KEY and email credentials are loaded from environment variables (see .env.example below).
+---
 
-backend/media/, venv/, node_modules/ and any SQLite DB are ignored via .gitignore.
+## 🧪 Development Status
 
-This repo is intended to demonstrate:
+Currently focused on:
+- Core flows (authentication, shop/product CRUD, order flow)
+- Integration between backend and frontend
 
-Backend + frontend integration
+Next steps:
+- 🧠 Improve dynamic-pricing algorithm  
+- 🧩 Implement admin tools for pricing rules  
+- 🧰 Add full unit + integration test coverage  
+- 🐳 Optional Docker setup for quick local spin-up  
+- ⚙️ Continuous Integration with GitHub Actions
 
-REST API design
+---
 
-Dynamic pricing/domain modelling
+## 💡 What I Learned
 
-## 🧪 Tests / status
+Developing **WallDrink** strengthened my experience with:
+- Building **REST APIs** using Django REST Framework  
+- Managing secure authentication with JWT and session-based logic  
+- Integrating **React + Django** into a cohesive full-stack workflow  
+- Structuring code for scalability and clean separation of concerns  
 
-Right now the main focus is on the core flows (auth, shops, products, orders).
-Formal automated test coverage is minimal / WIP. If you fork this repo and want to extend it, a good first contribution would be:
+---
 
-Add unit tests around the pricing logic
+## 📸 Preview
+<p align="center">
+  <img src="frontend/src/assets/IsologoWallDrink.png" width="120" alt="WallDrink logo" />
+</p>
 
-Add integration tests for auth + orders
+---
 
-## 🗺️ Roadmap / TODO
+## 🧑‍💻 Author
 
-Improve dynamic pricing algorithm and expose it clearly through the API
+**Víctor Marlor**  
+Full-stack Developer · Django · React · Python · JavaScript  
+[GitHub @victormarlor](https://github.com/victormarlor)
 
-Add admin/UI tools for configuring pricing rules per shop/product
+---
 
-Add proper test suite (pytest or Django tests)
+## ⚖️ License
 
-Docker setup for easier local spin-up
-
-CI (GitHub Actions) to run tests and linting on PRs
+Released under the **MIT License** – you’re free to use, modify, and learn from this code for non-commercial and educational purposes.
